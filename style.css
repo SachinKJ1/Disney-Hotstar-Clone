@@ -1,0 +1,320 @@
+*{
+    margin: 0;
+    padding: 0;
+}*, *::after, *::before{
+    box-sizing: border-box;
+}
+body{
+    background-color: #0C111B;
+}
+:root{
+    --slider-padding: 3rem;
+}
+header{
+    width: 100%;
+    height: 5rem;
+    background-color: #131A27;
+    box-sizing: border-box;
+    padding-left: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   position: fixed;
+    z-index: 100;
+}nav{
+    padding-top: 0.5rem;
+    position: fixed;
+    
+}
+nav ul{
+   display:flex;
+    gap: 2rem;
+  list-style: none;
+ align-items: center;
+}nav ul li a{
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+}.linkaligning{
+    padding-top: 0.5rem;
+}.Disney_logo{
+    width: 7rem;
+    height: 100%;
+}.iconSize{
+    font-size: 1.5rem;
+    display: flex;
+}
+/* Dropdown Contents */
+.dropdownContainer{
+    position: relative;
+    /* background-color:green; */
+    height: 2.5rem;
+   
+}.dropdownContainer:hover .dropdownLinks{
+    display: block;
+}
+.dropdownLinks{
+    width: 7rem;
+    position: absolute;
+    left: 0;
+    top: 2.5rem;
+    background-color:#222e45;
+    display: none;
+   border-radius: 5px;
+}.dropdownCompnents{
+    display:block;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+}
+.dropdownCompnents:hover{
+    background-color: #0C111B;
+}
+.nav2{
+    position: fixed;
+    right: 0;
+    top: 0;
+    margin-right: 2rem;
+    padding-top: 2rem;
+}.nav2 ul{
+    gap: 1rem;
+}.searchInput{
+    background-color: #131A27;
+    border: none;
+    border-bottom: 1px solid white;
+}.searchInput::placeholder{
+    color: white;
+    
+}
+.SearchIcon{
+    width: 1rem;
+    height: auto;
+}
+/*  Carousel styles */
+.carouselimage{
+height: 30rem;
+}
+.carouselDescription{
+    background-image:linear-gradient(to right,#030B17,#1a2a3e) ;
+    color: white;
+    box-sizing: border-box;
+    padding: 8rem 5rem;
+    
+}.gradient{
+    width: 10rem;
+    height: 100%;
+    background-image: linear-gradient(to left,transparent,#1a2a3e);
+}
+/*  Carousel bar one wide type */
+.CarouselBar{
+    margin-top: 2rem;
+}.CarouselBarTitle{
+    margin-left: 5rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+.containerCarousel{
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+}.slider{
+    --slider-index: 0;
+    width: calc(100% - 2 * var(--slider-padding));
+    display: flex;
+   transform: translateX(calc(var(--slider-index)*-100%));
+   transition:  transform 500ms ease-in-out;
+}.slider .sliderContent{
+    flex: 0 0 25%;
+    max-width: 25%;
+    aspect-ratio: 16/9;
+    padding: 0.25rem;
+    transition: transform 250ms ease-in-out;
+    position: relative;
+    overflow-y: hidden;
+}.slider .sliderContent:hover{
+    transform: scale(1.2);
+    z-index: 10;
+}.sliderContent img{
+    max-width: 100%;
+}.sliderLinks{
+    width: 99%;
+    position: absolute;
+    top: 79%;
+    left: 0%;
+    color:white;
+    font-size: smaller;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    background-color: rgba(0, 0, 0, 0.25);
+}.sliderWatchNowlink{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold
+}.sliderLinks:hover{
+    transition: 250ms ease-in-out;
+    top: 50%;
+    background-image: linear-gradient(to bottom,transparent,#0C111B);
+}.sliderContent:hover .sliderLinks{
+    top: 50%;
+    background-image: linear-gradient(to bottom,transparent,#0C111B);
+    transition: 250ms ease-in-out;
+}.sliderLinks button{
+    background-color: #222e45;
+    color: white;
+    width: 100%;
+    height: 2rem;
+    border-radius: 5px;
+    border: none;
+}
+.handle{
+    width: var(--slider-padding);
+    /* background-image: linear-gradient(to left,transparent,#1a2a3e); */
+    z-index: 10;
+    padding: 0.25rem 0;
+    
+    background-color: rgba(0, 0, 0, 0.25);
+    font-size: 5rem;
+    color: white;
+    transition: font-size 0.25s ease-in-out;
+    border: none;
+}.handle:hover{
+    background-color: rgba(0, 0, 0, 0.75);
+    font-weight: 500;
+}
+
+/*  carousel bar type two less wide more height */
+.sliderTypeTwoContent{
+    flex: 0 0 20%;
+    max-width: 20%;
+    padding: 0.25rem;
+    transition: transform 250ms ease-in-out;
+    position: relative;
+    overflow-y: hidden;
+}
+.sliderTypeTwoContent img{
+    width: 100%;
+    height: 22rem;
+    border-radius: 5px;
+}.sliderTypeTwoContent:hover .sliderLinks{
+    top: 60%;
+    background-image: linear-gradient(to bottom,transparent,#0C111B);
+    transition: 250ms ease-in-out;
+}.sliderTypeTwoContent:hover{
+    transform: scale(1.2);
+    z-index: 10;
+}
+/*  Footer settings */
+.SocialLinks{
+    text-decoration: none;
+    color: white;
+    font-size: 3rem;
+    display: inline-block;
+    margin-right: 2rem; 
+}.SocialLinks:hover{
+    color: rgb(62, 152, 212);
+}.appdownbtn{
+    width: 11rem;
+}.PolicyLinks{
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    margin-right: 1rem;
+}.PolicyLinks:hover{
+    color: rgb(46, 111, 224);
+}
+/* onVideoPlayStyles */
+.videoDiv{
+    width: 100%;
+    height: 50rem;
+    background-color: white;
+    padding-top: 25rem;
+    position: relative;
+}.onVideoDescription{
+ color: white;
+}
+.onVideoWatchlistbtn{
+    background-color: #0C111B;
+    color: white;
+    border: none;
+    margin-left: 1rem;
+}
+/* Menu styles */
+
+.channelsdiv{
+    padding-top: 10rem;
+    overflow: hidden;
+}.channelimg:hover{
+    transform: scale(1.2);
+    transition: 500ms;
+}
+/* Responsive settings */
+@media (max-width:1200px){
+    .carouselimage{
+        height: 28rem;
+    }.carouselDescription{
+        padding: 2rem 2rem;
+    }.sliderTypeTwoContent{
+        flex: 0 0 25%;
+        max-width: 25%;
+    }.slider .sliderContent{
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+    }.sliderLinks:hover{
+        top: 31%;
+    }.sliderContent:hover .sliderLinks{
+        top: 31%;
+    }.sliderLinks{
+        top: 70%;
+    }
+}@media (max-width:992px){
+    .sliderTypeTwoContent img{
+        height: 18rem;
+    }.listdisappear{
+        display: none;
+    }
+}@media (max-width:800px){
+    .carouselimage{
+        height: 24rem;
+    }
+    .sliderTypeTwoContent{
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+    }.slider .sliderContent{
+        flex: 0 0 50%;
+        max-width: 50%;
+    }.sliderLinks:hover{
+        top: 29%;
+    }.sliderContent:hover .sliderLinks{
+        top: 29%;
+    }
+}@media (max-width:600px){
+    html{
+        font-size: 85%;
+    }:root{
+        --slider-padding: 2rem;
+    }
+    .carouselimage{
+        height: 20rem;
+    }
+    .sliderTypeTwoContent img{
+        height: 14rem;
+    }.sliderLinks:hover{
+        top: 15%;
+    }.sliderContent:hover .sliderLinks{
+        top: 15%;
+    }.sliderLinks{
+        top: 60%;
+    }.carouselDescription{
+        height: 15rem;
+    }
+
+}@media (max-width:400px){
+    html{
+        font-size: 50%;
+    }.sliderTypeTwoContent{
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+    }
+}
